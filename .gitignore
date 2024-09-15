@@ -1,5 +1,9 @@
+#gitignore file for c/c++ language
 # Prerequisites
 *.d
+
+# Compiled Object files
+*.slo
 
 # Object files
 *.o
@@ -21,17 +25,15 @@
 *.a
 *.la
 *.lo
+*.lai
 
-# Shared objects (inc. Windows DLLs)
+# Shared objects (inc. Windows DLLs) | Compiled Dynamic libraries
 *.dll
 *.so
 *.so.*
 *.dylib
 
 # Executables
-*.exe
-*.out
-*.app
 *.i*86
 *.x86_64
 *.hex
@@ -42,11 +44,17 @@
 *.idb
 *.pdb
 
-# Kernel Module Compile Results
+# Kernel Module Compile Results | Fortran module files
 *.mod*
 *.cmd
+*.smod
 .tmp_versions/
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Executables
+*.exe
+*.out
+*.app
