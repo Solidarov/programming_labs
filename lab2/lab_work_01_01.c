@@ -18,6 +18,7 @@
 
 int main() {
 
+    // Налаштування вводу-виводу кирилиці
     SetConsoleCP(1251);   
 	SetConsoleOutputCP(1251);
     SetConsoleOutputCP(CP_UTF8);
