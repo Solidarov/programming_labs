@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>  
 
 size_t count_pixels(size_t k) {
 
