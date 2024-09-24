@@ -11,9 +11,9 @@ typedef struct Double_Point_Coordinates {
 
 double get_slope(point a, point b, bool *is_slope) {
   
-    double result = 0.0;
+   double result = 0.0;
 
-    if (((a.x==b.x) && (a.y==b.y)) || (a.x==b.x)){
+    if (a.x==b.x){
       *is_slope = false;
       
     }else {
