@@ -10,10 +10,5 @@ bool is_square(int n) {
   
     double square_root = sqrt(n);
     
-    if (square_root == (int)square_root){
-      return true;
-    
-    }else{
-      return false;
-    }
+    return square_root == (int)square_root;
 }
