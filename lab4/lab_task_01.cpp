@@ -8,7 +8,6 @@
 using namespace std;
 
 int main(){
-    //system("chcp 1251 >> null"); // функція для кирилиці
     SetConsoleCP(1251);   
 	SetConsoleOutputCP(1251);
     SetConsoleOutputCP(CP_UTF8);
