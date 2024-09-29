@@ -1,3 +1,7 @@
+/*
+Програма, що друкує ім'я та прізвище і з нового рядка - домашню адресу.
+*/
+
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
