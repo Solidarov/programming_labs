@@ -58,6 +58,7 @@ dkms.conf
 *.exe
 *.out
 *.app
+*/executable/*
 
 # gitignore for vscode 
 .vscode/*
