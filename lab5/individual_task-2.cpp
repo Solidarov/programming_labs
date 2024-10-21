@@ -4,7 +4,10 @@ using namespace std;
 int last_digit(long long int first_n, long long int second_n){
     first_n = first_n % 10;
     second_n = second_n % 4;
-
+    
+    if (second_n == 0){
+        return first_n; 
+    }
     if ((first_n == 0) || (first_n == 1) || (first_n == 5) || (first_n == 6)){
         return first_n;
     }
