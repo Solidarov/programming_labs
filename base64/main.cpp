@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <bitset>
+#include "b64/encode.h"
 using namespace std;
 
 
@@ -16,8 +17,22 @@ int main(){
 
     string result = base64_encoding(msg, msg_len);
     
-    cout << result << endl;
-    
+    cout << "Encoded message by my base64:\t " << result << endl;
+
+    // Використання бібліотеки libb64
+    base64::encoder encoder;
+    std::string encoded;
+    encoded.resize(msg.size() * 2);
+
+    int encoded_size = encoder.encode(msg.data(), msg.size(), &encoded[0]);
+
+    int final_size = encoder.encode_end(&encoded[encoded_size]);
+    encoded_size += final_size;
+
+    encoded.resize(encoded_size);
+
+    std::cout << "Encoded message by libb64:\t " << encoded << std::endl;
+
     return 0;
 }
 
