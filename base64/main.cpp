@@ -8,7 +8,7 @@ using namespace std;
 
 
 string base64_encoding(string, int);
-string base64_decoding(string, int);\
+string base64_decoding(string, int);
 
 // Таблиця символів для Base64
 static const char b64_table[] = {
