@@ -3,6 +3,7 @@
 #include <bitset>
 #include <bits/stdc++.h>
 #include "b64/encode.h"
+#include "b64/decode.h"
 using namespace std;
 
 
@@ -51,7 +52,18 @@ int main(){
 
     }else{
         result_msg = base64_decoding(msg, msg_len);
-        cout << "\nDecoded message by my base64: " << result_msg << endl;
+
+        cout << "\nDecoded message by my base64:\t " << result_msg << endl;
+
+        base64::decoder decoder;
+        string decoded;
+        decoded.resize(msg.size()); // Заздалегідь виділяємо достатньо місця
+
+        int decoded_size = decoder.decode(msg.data(), msg.size(), &decoded[0]);
+        decoded.resize(decoded_size); // Обрізаємо до фактичного розміру
+
+        cout << "Decoded message by libb64:\t " << decoded << endl;
+
     }
     return 0;
 }
