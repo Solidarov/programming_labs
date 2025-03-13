@@ -50,7 +50,7 @@ int main(){
     
         cout << "Encoded message by libb64:\t " << encoded << endl;
 
-    }else{
+    } else {
         result_msg = base64_decoding(msg, msg_len);
 
         cout << "\nDecoded message by my base64:\t " << result_msg << endl;
