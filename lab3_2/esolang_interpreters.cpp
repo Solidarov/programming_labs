@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-std::string my_first_interpreter(const std::string& code)
+string my_first_interpreter(const string& code)
 {
     string result;
     size_t count = 0;
