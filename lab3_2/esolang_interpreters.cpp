@@ -6,16 +6,14 @@ string my_first_interpreter(const string& code)
 {
     string result;
     size_t count = 0;
-    unsigned char ch = 0;
 
     for (char c : code){
         if (c == '+'){
             count++;
         }
         if(c == '.'){
-            ch = (ch + count) % 256;
-            result += ch;
-            count = 0;
+            count = count % 256;
+            result += char(count);
         }
     }
 
